@@ -21,7 +21,7 @@ git clone https://github.com/msfuji/qdnaseq-pipeline.git
 cd qdnaseq-pipeline
 ```
 
-## Run pipeline.
+## Run pipeline
 Among sections of config file, only `[bam_import]` and `[mutation_call]` will be interpreted.
 ```
 /usr/local/package/python2.7/2.7.2/bin/python qdnaseq-pipeline.py <genomon_sample_conf.csv>
