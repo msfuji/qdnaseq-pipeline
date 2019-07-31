@@ -1,5 +1,5 @@
 # qdnaseq-pipeline
-A pipeline for running QDNAseq on the SHIROKANE supercomputer.
+Pipeline for running QDNAseq on the SHIROKANE supercomputer.
 
 ## Log in to OS6
 ```
