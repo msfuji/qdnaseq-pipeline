@@ -22,7 +22,7 @@ cd qdnaseq-pipeline
 ```
 
 ## Run pipeline.
-Among sections of config file, only [bam_import] and [mutation_call] will be interpreted.
+Among sections of config file, only `[bam_import]` and `[mutation_call]` will be interpreted.
 ```
 /usr/local/package/python2.7/2.7.2/bin/python qdnaseq-pipeline.py <genomon_sample_conf.csv>
 ```
