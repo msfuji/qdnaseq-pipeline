@@ -1,4 +1,10 @@
 #! /usr/bin/env python
+#
+# This file was copied from GenomonPipeline 
+# (https://github.com/Genomon-Project/GenomonPipeline)
+# and thus restricted by the Genomon license, which can be found
+# in misc/ directory of this repository.
+#
 
 import os
 
