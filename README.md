@@ -6,14 +6,19 @@ Pipeline for running QDNAseq on the SHIROKANE supercomputer.
 qlogin -l os6
 ```
 
-## Install QDNAseq into R ver. 3.6.0
+## Install QDNAseq into R v3.6.0
+Start R.
 ```
 /usr/local/package/r/3.6.0/bin/R
-> install.packages(c("dplyr", "data.table"))
-> if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-> BiocManager::install("QDNAseq")
-> q()
+```
+Install packages into R
+```
+install.packages(c("dplyr", "data.table"))
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("QDNAseq")
+BiocManager::install("QDNAseq.hg19")
+q()
 ```
 
 ## Download pipeline
