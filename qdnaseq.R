@@ -29,7 +29,7 @@ bins <- getBinAnnotations(binSize=15)
 
 
 readCounts <- binReadCounts(bins, bamfiles=c(tumor_bam, normal_bam),
-                            ext="markdup.downsampled.bam")
+                            ext="downsampled.bam")
 readCountsFiltered <- applyFilters(readCounts)
 readCountsFiltered <- estimateCorrection(readCountsFiltered)
 copyNumbers <- correctBins(readCountsFiltered)
@@ -61,7 +61,7 @@ setwd(outdir)
 #
 # export segments
 #
-file <- paste0(tumor_id, ".tsv")
+file <- paste0(tumor_id, ".tmp.tsv")
 exportBins(copyNumbersSegmented, file=file, type="segments")
 png(sprintf("%s.segments.png", tumor_id))
 plot(copyNumbersSegmented)

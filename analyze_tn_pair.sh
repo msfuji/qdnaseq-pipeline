@@ -34,7 +34,7 @@ $RSCRIPT qdnaseq.R $tumor_id $tumor_ds_bam $normal_id $normal_ds_bam $outdir
 #
 # make GISTIC2 input
 #
-inseg="${outdir}/${tumor_id}.seg"
-outseg="${outdir}/${tumor_id}.join.seg"
+inseg="${outdir}/${tumor_id}.tmp.tsv"
+outseg="${outdir}/${tumor_id}.seg"
 $RSCRIPT make-seg.R $tumor_id $inseg $outseg
 
