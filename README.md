@@ -18,7 +18,6 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install("QDNAseq")
 BiocManager::install("QDNAseq.hg19")
-q()
 ```
 
 ## Download pipeline
