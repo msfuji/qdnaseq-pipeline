@@ -11,7 +11,7 @@ Start R.
 ```
 /usr/local/package/r/3.6.0/bin/R
 ```
-Install packages into R
+Install required packages.
 ```
 install.packages(c("dplyr", "data.table"))
 if (!requireNamespace("BiocManager", quietly = TRUE))
