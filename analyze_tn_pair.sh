@@ -29,7 +29,7 @@ normal_ds_bam="${outdir}/${normal_id}.downsampled.bam"
 # run qdnaseq
 #
 RSCRIPT="/usr/local/package/r/3.6.0/bin/Rscript"
-$RSCRIPT qdnaseq.R $tumor_id $tumor_ds_bam $normal_id $tumor_ds_bam $outdir
+$RSCRIPT qdnaseq.R $tumor_id $tumor_ds_bam $normal_id $normal_ds_bam $outdir
 
 #
 # make GISTIC2 input

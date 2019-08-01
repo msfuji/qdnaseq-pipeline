@@ -9,6 +9,7 @@ qlogin -l os6
 ## Install QDNAseq into R ver. 3.6.0
 ```
 /usr/local/package/r/3.6.0/bin/R
+> install.packages(c("dplyr", "data.table"))
 > if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 > BiocManager::install("QDNAseq")
