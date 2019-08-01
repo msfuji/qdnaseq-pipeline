@@ -11,6 +11,7 @@
 
 library(dplyr)
 library(data.table)
+library(readr)
 
 #
 # parse command args

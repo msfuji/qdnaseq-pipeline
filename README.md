@@ -13,7 +13,7 @@ Start R.
 ```
 Install required packages.
 ```
-install.packages(c("dplyr", "data.table"))
+install.packages(c("dplyr", "data.table", "readr"))
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install("QDNAseq")
