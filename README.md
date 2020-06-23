@@ -1,9 +1,9 @@
 # qdnaseq-pipeline
 Pipeline for running QDNAseq on the SHIROKANE supercomputer.
 
-## Log in to OS6
+## qlogin
 ```
-qlogin -l os6
+qlogin
 ```
 
 ## Install QDNAseq into R v3.6.0
@@ -16,6 +16,9 @@ Install required packages.
 install.packages(c("dplyr", "data.table", "readr"))
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
+BiocManager::install("impute")
+BiocManager::install("marray")
+install.packages("R.methodsS3")
 BiocManager::install("QDNAseq")
 BiocManager::install("QDNAseq.hg19")
 ```
@@ -29,5 +32,8 @@ cd qdnaseq-pipeline
 ## Run pipeline
 Among sections of config file, only `[bam_import]` and `[mutation_call]` will be interpreted.
 ```
-/usr/local/package/python2.7/2.7.2/bin/python qdnaseq-pipeline.py <genomon_sample_conf.csv>
+/usr/local/package/python/2.7.15/bin/python2.7 qdnaseq-pipeline.py <genomon_sample_conf.csv>
 ```
+
+## Output
+CNV calls are stored in a VCF file. SCORE represents double deletion (-2), single deletion (-1), gain (1), double gain (2) and amplification (3).

@@ -22,8 +22,9 @@ bash qsub-flagstat.sh $normal_bam $normal_stat
 #
 tumor_ds_bam="${outdir}/${tumor_id}.downsampled.bam"
 normal_ds_bam="${outdir}/${normal_id}.downsampled.bam"
-/usr/local/bin/python qsub-downsample.py $tumor_bam $tumor_stat $tumor_ds_bam
-/usr/local/bin/python qsub-downsample.py $normal_bam $normal_stat $normal_ds_bam
+PYTHON="/usr/local/package/python/2.7.15/bin/python2.7"
+$PYTHON qsub-downsample.py $tumor_bam $tumor_stat $tumor_ds_bam
+$PYTHON qsub-downsample.py $normal_bam $normal_stat $normal_ds_bam
 
 #
 # run qdnaseq
