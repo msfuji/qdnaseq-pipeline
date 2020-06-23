@@ -1,11 +1,6 @@
 # qdnaseq-pipeline
 Pipeline for running QDNAseq on the SHIROKANE supercomputer.
 
-## qlogin
-```
-qlogin
-```
-
 ## Install QDNAseq into R v3.6.0
 Start R.
 ```
@@ -30,10 +25,14 @@ cd qdnaseq-pipeline
 ```
 
 ## Run pipeline
-Among sections of config file, only `[bam_import]` and `[mutation_call]` will be interpreted.
+Among sections of config file, only `[bam_import]` and `[mutation_call]` will be
+interpreted.
 ```
 /usr/local/package/python/2.7.15/bin/python2.7 qdnaseq-pipeline.py <genomon_sample_conf.csv>
 ```
 
 ## Output
-CNV calls are stored in a VCF file. SCORE represents double deletion (-2), single deletion (-1), gain (1), double gain (2) and amplification (3).
+The CNV call is stored in VCF files. CHROM, POS, and END show the coordinates of
+CNV. ALT sholws the type of CNV (deletion or duplication).
+SCORE represents double deletion (-2), single deletion (-1), gain (1), double
+gain (2) and amplification (3).
